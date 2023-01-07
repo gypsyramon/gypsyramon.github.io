@@ -1,0 +1,503 @@
+/* reset css */
+* {
+	margin: 0;
+	padding: 0;
+}
+/* variable css */
+:root {
+    --black-sp : #100c08;
+    --grey-sp : #272726;
+    --yellow-sp : #fff155;
+}
+/* import font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+@font-face {
+    font-family: roca-two;
+    src: url(../font/roca-two/roca-two.ttf);
+}
+@font-face {
+    font-family: roca-two-lit;
+    src: url(../font/roca-two/roca-two-light-it.ttf);
+}
+@font-face {
+    font-family: roca-two-it;
+    src: url(../font/roca-two/roca-two-it.ttf);
+}
+@font-face {
+    font-family: spfont;
+    src: url(../font/SinguliersPluriel6.otf);
+}
+@font-face {
+    font-family: avenir-l;
+    src: url(../font/avenir/Avenir-Light.ttf);
+}
+@font-face {
+    font-family: avenir-m;
+    src: url(../font/avenir/Avenir-Medium.ttf);
+}
+/* style paragraphe texte */
+html {
+    overflow-x: hidden;
+    color: var(--black-sp);
+    background: var(--yellow-sp);
+}
+
+/* style du composant menu */
+header {
+    height: 80px;
+}
+nav {
+	margin:5px;
+}
+.container {
+  width:45px;
+  height:45px;
+  padding: 10px;
+  overflow: hidden;
+  background-color: #FFF;
+  border: 1px solid var(--black-sp);
+  border-radius:45px;
+  box-shadow: -3px 3px;
+  transition: 0.4s ease-in-out;
+  position: fixed;
+  z-index: 999;
+}
+.change .container {
+  width:350px;
+  height:270px;
+	border-radius:35px;
+}
+.cross {
+	position:relative;
+	top:4px;
+	left:4px;
+}
+ul {
+  list-style-type: none;
+  display:none;
+}
+.change ul {
+  display:block;
+	margin:16px;
+}
+li a {
+  display: block;
+	position:relative;
+  color: var(--black-sp);
+  text-decoration: none;
+  text-transform:uppercase;
+  font-family: 'Montserrat', sans-serif;
+	transition: 2s ease-out;
+	opacity:0;
+}
+.change li a {
+	margin:16px;
+	opacity:1;
+}
+.slide-line::before {
+  content: "";
+  position: absolute;
+  background: var(--grey-sp);
+  width: 50%;
+  height: 2px;
+  bottom: -2px;
+  transform-origin: 100% 0;
+  transform: scaleX(0);
+  transition: transform 0.4s;
+}
+.slide-line:hover::before {
+  transform-origin: 0 0;
+  transform: scaleX(1);
+}
+.cross {
+  display: inline-block;
+  cursor: pointer;
+}
+.bar1, .bar2, .bar3 {
+  background-color: var(--grey-sp);
+  margin: 6px 0;
+  border-radius:5px;
+  transition: 0.4s ease-out;
+}
+.bar1 {
+  width: 15px;
+  height: 5px;
+}
+.bar2 {
+  width: 35px;
+  height: 5px;
+}
+.bar3 {
+  width: 25px;
+  height: 5px;
+}
+.change .bar1 {
+  transform: translate(0, 11px) rotate(45deg);
+  width: 35px;
+  height: 5px;
+}
+.change .bar2 {
+  transform: translate(14px, 0);
+  width: 5px;
+  height: 5px;
+}
+.change .bar3 {
+  transform: translate(0, -11px) rotate(-45deg);
+  width: 35px;
+  height: 5px;
+}
+.social-icon {
+	display:none;
+}
+.change .social-icon {
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+}
+.fa {
+	color:var(--grey-sp);
+}
+
+/* mise en page du hero */
+/*----------------------*/
+/*----------------------*/
+.hero {
+    position: relative;
+}
+.hero-logo-text {
+    height: 68vh;
+    background: linear-gradient(178deg, #fff155 80%, #fff 30%);
+}
+/* --------------- version avec image 
+.logo {
+    width: 55%;
+    max-width: 545px;
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%,0);
+  }
+.pluriel {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top: 28px;
+}
+------------ fin de version avec image */
+.hero .logo-text {
+    margin: 0 auto;
+    width: 55%;
+    max-width: 545px;
+    max-height: 382px;
+    height: 382px;
+    display: flex;
+    align-items: center;
+    background: no-repeat center/100% url(../img/Logo-SP-bulle-BG.png);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+h1 {
+    display: block;
+    font-family: roca-two;
+    z-index: 2;
+    font-size: 9.7vmin;
+    line-height: 9.5vmin;
+    color: #FFF;
+    letter-spacing: -2px;
+    margin: 0 auto;
+    transform: translateY(-16px);
+}
+h1 span {
+    display: block;
+    font-family: spfont;
+    margin-left: 4px;
+    font-size: 11.5vmin;
+    letter-spacing: -2px;
+}
+.baseline {
+    padding-left: 4px;
+    font-family: avenir-l;
+    text-transform: uppercase;
+    font-size: 2.6vmin;
+    letter-spacing: 1px;
+    line-height: 1em;
+    color: var(--yellow-sp);
+}
+
+.pluriel-bg {
+    font-family: spfont;
+    display: block;
+    letter-spacing: -2px;
+    font-size: 28vmin;
+    text-align: center;
+    line-height: 8.5vmin;
+    transform: rotate(-2deg);
+    position: relative;
+    top: 170px;
+    z-index: 1;
+}
+
+.hero-menu {
+    display: none;
+    justify-content: space-around;
+    background-color: #FFF;
+}
+.hero-menu a {
+    text-decoration: none;
+    text-align: center;
+    font-family: avenir-l;
+    color: var(--black-sp);
+    width: 100%;
+    position: relative;
+}
+.hero-menu a span {
+    font-family: roca-two-lit;
+    font-size: 24px;
+}
+.social-icon-hero {
+display: flex;
+justify-content: space-around;
+align-items: center;
+width: 174px;
+}
+.line-1::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 1px;
+    display: inline-block;
+    height: 550px;
+    top: 0px;
+    left: 4%;
+}
+.line-2::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 1px;
+    display: inline-block;
+    height: 550px;
+    top: 0px;
+    left: 22%;
+}
+.line-3::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 1px;
+    display: inline-block;
+    height: 550px;
+    top: 0px;
+    left: 41%;
+}
+.line-4::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 1px;
+    display: inline-block;
+    height: 550px;
+    top: 0px;
+    left: 59%;
+}
+.line-5::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 1px;
+    display: inline-block;
+    height: 550px;
+    top: 0px;
+    left: 78%;
+}
+.line-5::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 1px;
+    display: inline-block;
+    height: 550px;
+    top: 0px;
+    left: 96%;
+}
+/* mise en page section agence */
+/*-----------------------------*/
+/*-----------------------------*/
+
+.agence {
+    padding-top: 70px;
+    background-color: #FFF;
+}
+.agence h2 {
+    font-family: avenir-m;
+    font-size: 9vmin;
+    line-height: 9vmin;
+    padding-left: 9vmin;
+}
+.agence h2 span {
+    font-family: roca-two-it;
+}
+.card {
+    width: 70%;
+    max-width: 1000px;
+    margin: 80px 0 0 9vmin;
+    padding: 42px 24px;
+    border: 3px solid var(--black-sp);
+    border-radius: 50px;
+    box-shadow: -3px 3px;
+    background-color: #FFF;
+    z-index: 1;
+    position: relative;
+}
+.card.small {
+    max-width: 650px;
+}
+.card>div {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.card p {
+    font-family: avenir-m;
+    font-size: 18px;
+    line-height: 24px;
+}
+.card .num {
+    font-family: roca-two-lit;
+    font-size: 26vmin;
+    line-height: 136px;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 18px;
+}
+.card .text p:first-child>span {
+    font-family: roca-two-it;
+    font-size: 24px;
+}
+.quote{
+    width: 64vw;
+    font-family: avenir-m;
+    font-size: 4vmin;
+    margin-left: 16vmin;
+    margin-top: 61px;
+}
+.quote h3 span {
+    font-family: roca-two-lit;
+    font-size: 4vmin;
+}
+h4 {
+    font-family: avenir-m;
+    font-size: 4vmin;
+    margin-top: 34px;
+    padding-left: 9vmin;
+}
+h4+p {
+    max-width: 277px;
+    margin-top: 1em;
+    padding-left: 17vmin;
+}
+
+/* mise en page de nos métiers */
+/*-----------------------------*/
+/*-----------------------------*/
+h5 {
+    font-family: roca-two;
+    font-size: 48px;
+}
+.video-photo {
+    margin-top: -117px;
+    display: flex;
+}
+.video-photo div {
+    width: 50%;
+}
+.video-photo img {
+    width: 100%;
+}
+.video-photo>div:last-child {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.video ,.photo {
+    display: flex;
+    align-items: baseline;
+    margin: 32px 0 62px 0;
+    padding: 32px 0 0 96px;
+    border-top: 1px solid var(--black-sp);
+    padding-top: 32px;
+}
+.video ul,.photo ul {
+    display: block;
+    list-style-type: disc;
+}
+/* responsive mobile first */
+/*-------------------------*/
+/*-------------------------*/
+
+@media screen and (min-width:847px){
+	nav {
+		margin:5px 24px 5px 5px;
+	} 
+ .change .container {
+	  width:96.8%;
+	  height:45px;
+    display:flex;
+    border-radius:50px;
+  }
+  .change ul {
+    list-style-type: none;
+    display:flex;
+    justify-content:space-between;
+		align-items:center;
+		margin:0 5%;
+		width:90%;
+  }
+	.slide-line::before {
+		width:100%;
+	}
+	.change .cross {
+		width:3%;
+	}
+	.change .social-icon {
+		width:10%;
+		margin:0 1%;
+	}
+    h1 {
+        font-size: 11.7vmin;
+        line-height: 11.5vmin;
+        transform: translateY(-22px);
+    }
+    h1 span {
+        font-size: 14vmin;
+    }
+    .baseline {
+        font-size: 3.3vmin;
+    }
+    .pluriel-bg {
+        font-size: 37vmin;
+    }
+    .hero-menu {
+        display: flex;
+    }
+    .text {
+        flex-direction: row;
+    }
+    .card>div {
+        flex-direction: row;
+        height: 211px;
+    }
+    .card .num {
+        line-height: 288px;
+    }
+}
+
