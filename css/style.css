@@ -8,6 +8,7 @@
     --black-sp : #100c08;
     --grey-sp : #272726;
     --yellow-sp : #fff155;
+    --res: calc(0.01*10vmin);
 }
 /* import font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
@@ -165,7 +166,7 @@ li a {
     position: relative;
 }
 .hero-logo-text {
-    height: 68vh;
+    height: 40vw;
     background: linear-gradient(178deg, #fff155 80%, #fff 30%);
 }
 /* --------------- version avec image 
@@ -190,13 +191,15 @@ li a {
 ------------ fin de version avec image */
 .hero .logo-text {
     margin: 0 auto;
-    width: 55%;
-    max-width: 545px;
+    /*width: 55%;*/
+    width: 100%;
+    /*max-width: 545px;
     max-height: 382px;
-    height: 382px;
+    height: 382px;*/
+    height: 100%;
     display: flex;
     align-items: center;
-    background: no-repeat center/100% url(../img/Logo-SP-bulle-BG.png);
+    background: no-repeat center/38vw url(../img/Logo-SP-bulle-BG.png);
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -206,25 +209,25 @@ h1 {
     display: block;
     font-family: roca-two;
     z-index: 2;
-    font-size: 9.7vmin;
-    line-height: 9.5vmin;
+    font-size: 6.7vw;
+    line-height: 6.5vw;
     color: #FFF;
     letter-spacing: -2px;
     margin: 0 auto;
-    transform: translateY(-16px);
+    transform: translateY(-11%);
 }
 h1 span {
     display: block;
     font-family: spfont;
     margin-left: 4px;
-    font-size: 11.5vmin;
+    font-size: 8vw;
     letter-spacing: -2px;
 }
 .baseline {
     padding-left: 4px;
     font-family: avenir-l;
     text-transform: uppercase;
-    font-size: 2.6vmin;
+    font-size: 1.9vw;
     letter-spacing: 1px;
     line-height: 1em;
     color: var(--yellow-sp);
@@ -234,19 +237,26 @@ h1 span {
     font-family: spfont;
     display: block;
     letter-spacing: -2px;
-    font-size: 28vmin;
+    font-size: 22vw;
     text-align: center;
-    line-height: 8.5vmin;
+    line-height: 6.5vw;
     transform: rotate(-2deg);
     position: relative;
-    top: 170px;
+    top: 10vw;
     z-index: 1;
 }
-
 .hero-menu {
     display: none;
     justify-content: space-around;
     background-color: #FFF;
+    z-index: 2;
+    position: relative;
+    padding-top: 24px;
+}
+.hero-menu .bg {
+    display: flex;
+    width: 76vw;
+    justify-content: space-between;
 }
 .hero-menu a {
     text-decoration: none;
@@ -261,10 +271,10 @@ h1 span {
     font-size: 24px;
 }
 .social-icon-hero {
-display: flex;
-justify-content: space-around;
-align-items: center;
-width: 174px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 174px;
 }
 .line-1::before {
     content: "";
@@ -273,8 +283,8 @@ width: 174px;
     width: 1px;
     display: inline-block;
     height: 550px;
-    top: 0px;
-    left: 4%;
+    bottom: 16px;
+    left: 10%;
 }
 .line-2::before {
     content: "";
@@ -283,8 +293,8 @@ width: 174px;
     width: 1px;
     display: inline-block;
     height: 550px;
-    top: 0px;
-    left: 22%;
+    bottom: 16px;
+    left: 26%;
 }
 .line-3::before {
     content: "";
@@ -293,8 +303,8 @@ width: 174px;
     width: 1px;
     display: inline-block;
     height: 550px;
-    top: 0px;
-    left: 41%;
+    bottom: 16px;
+    left: 42%;
 }
 .line-4::before {
     content: "";
@@ -303,8 +313,8 @@ width: 174px;
     width: 1px;
     display: inline-block;
     height: 550px;
-    top: 0px;
-    left: 59%;
+    bottom: 16px;
+    left: 58%;
 }
 .line-5::before {
     content: "";
@@ -313,8 +323,8 @@ width: 174px;
     width: 1px;
     display: inline-block;
     height: 550px;
-    top: 0px;
-    left: 78%;
+    bottom: 16px;
+    left: 74%;
 }
 .line-5::after {
     content: "";
@@ -323,8 +333,8 @@ width: 174px;
     width: 1px;
     display: inline-block;
     height: 550px;
-    top: 0px;
-    left: 96%;
+    bottom: 16px;
+    left: 90%;
 }
 /* mise en page section agence */
 /*-----------------------------*/
@@ -336,9 +346,9 @@ width: 174px;
 }
 .agence h2, .portfolio h2 {
     font-family: avenir-m;
-    font-size: 9vmin;
-    line-height: 9vmin;
-    padding-left: 9vmin;
+    font-size: 4.5vw;
+    line-height: 5vw;
+    padding-left: 9vw;
 }
 .agence h2 span {
     font-family: roca-two-it;
@@ -346,7 +356,7 @@ width: 174px;
 .card {
     width: 70%;
     max-width: 1000px;
-    margin: 80px 0 0 9vmin;
+    margin: 80px 0 0 9vw;
     padding: 42px 24px;
     border: 3px solid var(--black-sp);
     border-radius: 50px;
@@ -374,7 +384,7 @@ width: 174px;
 }
 .card .num {
     font-family: roca-two-lit;
-    font-size: 26vmin;
+    font-size: 17vw;
     line-height: 136px;
 }
 .text {
@@ -390,24 +400,25 @@ width: 174px;
 .quote{
     width: 64vw;
     font-family: avenir-m;
-    font-size: 4vmin;
-    margin-left: 16vmin;
+    font-size: 2.4vw;
+    margin-left: 16vw;
     margin-top: 61px;
 }
 .quote h3 span {
     font-family: roca-two-lit;
-    font-size: 4vmin;
+    font-size: 2.4vw;
 }
 h4 {
     font-family: avenir-m;
-    font-size: 4vmin;
+    font-size: 4vw;
     margin-top: 34px;
-    padding-left: 9vmin;
+    padding-left: 9vw;
 }
 h4+p {
     max-width: 277px;
     margin-top: 1em;
-    padding-left: 17vmin;
+    padding-left: 17vw;
+    font-family: avenir-m;
 }
 
 /* mise en page de nos métiers */
@@ -703,7 +714,7 @@ button {
 		width:10%;
 		margin:0 1%;
 	}
-    h1 {
+    /*h1 {
         font-size: 11.7vmin;
         line-height: 11.5vmin;
         transform: translateY(-22px);
@@ -716,7 +727,7 @@ button {
     }
     .pluriel-bg {
         font-size: 37vmin;
-    }
+    }*/
     .hero-menu {
         display: flex;
     }
