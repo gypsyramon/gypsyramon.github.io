@@ -354,8 +354,8 @@ h1 span {
     font-family: roca-two-it;
 }
 .card {
-    width: 70%;
-    max-width: 1000px;
+    width: 70vw;
+    max-width: 1301px;
     margin: 80px 0 0 9vw;
     padding: 42px 24px;
     border: 3px solid var(--black-sp);
@@ -383,7 +383,7 @@ h1 span {
 }
 .card .num {
     font-family: roca-two-lit;
-    font-size: 17vw;
+    font-size: 10vw;
     line-height: 136px;
 }
 .text {
