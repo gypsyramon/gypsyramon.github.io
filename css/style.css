@@ -211,7 +211,7 @@ h1 {
     font-family: roca-two;
     z-index: 2;
     font-size: 6.7vw;
-    line-height: 6.5vw;
+    line-height: 5.8vw;
     color: #FFF;
     letter-spacing: -2px;
     margin: 0 auto;
@@ -229,15 +229,15 @@ h1 span {
 h1>span.bg-font {
     position: absolute;
     color: var(--yellow-sp);
-    top: 93px;
-    left: -4px;
+    top: 6.2vw;
+    left: -3px;
     z-index: -1;
 }
 .baseline {
-    padding-left: 4px;
+    bottom: -1vw;
     font-family: avenir-l;
     text-transform: uppercase;
-    font-size: 1.9vw;
+    font-size: 1.7vw;
     letter-spacing: 1px;
     line-height: 1em;
     color: var(--yellow-sp);
@@ -252,10 +252,20 @@ h1>span.bg-font {
     line-height: 6.5vw;
     transform: rotate(-2deg);
     position: relative;
-    top: 10vw;
+    top: 7vw;
     z-index: 1;
-    color: #fff;
+    color: var(--yellow-sp);
     text-shadow: 1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000, -1px 1px 1px #000;
+}
+.pluriel-bg p {
+    position: relative;
+}
+.pluriel-bg .bg-hero {
+    position: absolute;
+    display: block;
+    color: #fff;
+    top: -0.5vw;
+    left: 11vw;
 }
 .hero-menu {
     display: none;
