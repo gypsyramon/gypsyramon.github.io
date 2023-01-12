@@ -8,7 +8,6 @@
     --black-sp : #100c08;
     --grey-sp : #272726;
     --yellow-sp : #fff155;
-    --res: calc(0.01*10vmin);
 }
 /* import font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
@@ -26,7 +25,7 @@
 }
 @font-face {
     font-family: spfont;
-    src: url(../font/SinguliersPluriel6.otf);
+    src: url(../font/TitanOne.ttf);
 }
 @font-face {
     font-family: avenir-l;
@@ -38,9 +37,11 @@
 }
 /* style paragraphe texte */
 html {
-    overflow-x: hidden;
     color: var(--black-sp);
     background: var(--yellow-sp);
+}
+body {
+    overflow-x: hidden;
 }
 
 /* style du composant menu */
@@ -218,10 +219,19 @@ h1 {
 }
 h1 span {
     display: block;
+    position: relative;
     font-family: spfont;
     margin-left: 4px;
-    font-size: 8vw;
+    font-size: 7.4vw;
     letter-spacing: -2px;
+    text-shadow: 1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000, -1px 1px 1px #000;
+}
+h1>span.bg-font {
+    position: absolute;
+    color: var(--yellow-sp);
+    top: 93px;
+    left: -4px;
+    z-index: -1;
 }
 .baseline {
     padding-left: 4px;
@@ -244,6 +254,8 @@ h1 span {
     position: relative;
     top: 10vw;
     z-index: 1;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000, 1px -1px 1px #000, -1px -1px 1px #000, -1px 1px 1px #000;
 }
 .hero-menu {
     display: none;
