@@ -175,33 +175,9 @@ li a {
     height: 40vw;
     background: linear-gradient(178deg, #fff155 80%, #fff 30%);
 }
-/* --------------- version avec image 
-.logo {
-    width: 55%;
-    max-width: 545px;
-    margin: 0 auto;
-    display: block;
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    transform: translate(-50%,0);
-  }
-.pluriel {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    display: block;
-    position: relative;
-    top: 28px;
-}
------------- fin de version avec image */
 .hero .logo-text {
     margin: 0 auto;
-    /*width: 55%;*/
     width: 100%;
-    /*max-width: 545px;
-    max-height: 382px;
-    height: 382px;*/
     height: 68%;
     display: flex;
     align-items: center;
@@ -376,7 +352,7 @@ h1>span.bg-font {
     font-family: avenir-m;
     font-size: max(32px,4.5vw);
     line-height: max(32px,5vw);
-    padding-left: 9vw;
+    padding: 0 9vw;
 }
 .agence h2 span {
     font-family: roca-two-it;
@@ -384,7 +360,7 @@ h1>span.bg-font {
 .card {
     width: 70vw;
     max-width: 1301px;
-    margin: 80px 0 0 9vw;
+    margin: 8.5vw 0 0 9vw;
     padding: 42px 24px;
     border: 3px solid var(--black-sp);
     border-radius: 50px;
@@ -397,7 +373,7 @@ h1>span.bg-font {
     max-width: 650px;
 }
 .card.small.third {
-    margin: 80px auto 0;
+    margin: 8.5vw auto 0;
 }
 .card>div {
     display: flex;
@@ -440,7 +416,7 @@ h4 {
     font-family: avenir-m;
     font-size: max(24px,4vw);
     margin-top: 34px;
-    padding-left: 9vw;
+    padding: 0 9vw;
 }
 h4+p {
     max-width: 277px;
@@ -454,10 +430,10 @@ h4+p {
 /*-----------------------------*/
 h5 {
     font-family: roca-two;
-    font-size: 48px;
+    font-size: max(24px,3vw);
 }
 .video-photo {
-    margin-top: -117px;
+    margin-top: -8vw;
     display: flex;
     background-color: var(--yellow-sp);
 }
@@ -465,6 +441,7 @@ h5 {
     display: flex;
     width: 89%;
     padding-bottom: 45px;
+    margin-left: 11vw;
 }
 .video-photo div {
     width: 80%;
@@ -502,7 +479,7 @@ h5 {
 .video , .photo, .web, .graph {
     display: flex;
     align-items: baseline;
-    margin: 32px 0 62px 0;
+    margin: 3vw 0 6vw 0;
     border-top: 1px solid var(--black-sp);
     padding-top: 32px;
 }
@@ -516,7 +493,7 @@ h5 {
     display: flex;
     margin: -55px auto;
     width: 100%;
-    gap: 24px;
+    gap: 3vw;
     max-width: 650px;
 }
 .video ul,.photo ul, .web ul, .graph ul, .media ul, .strat ul {
@@ -548,7 +525,29 @@ h5 {
 /*    display: flex;
     align-items: center;*/
 }
-.projet-one:before {
+.projet-two {
+    background: no-repeat center/cover url(../img/test\ 2\ fond\ bg\ portfolio.png);
+    height: 570px;
+    position: relative;
+/*    display: flex;
+    align-items: center;*/
+}
+.projet-third {
+    background: no-repeat center/cover url(../img/test\ 3\ fond\ bg\ portfolio.png);
+    height: 570px;
+    position: relative;
+/*    display: flex;
+    align-items: center;*/
+}
+.projet-four {
+    background: no-repeat center/cover url(../img/test\ 4\ fond\ bg\ portfolio.png);
+    height: 570px;
+    position: relative;
+/*    display: flex;
+    align-items: center;*/
+}
+
+.projet-one:before, .projet-two:before, .projet-third:before, .projet-four:before {
     content: "";
     position: absolute;
     left: 0; right: 0;
@@ -556,7 +555,7 @@ h5 {
     background: rgba(0,0,0,.1);
     transition: 2s ease-out;
 }
-.projet-one:hover:before {
+.projet-one:hover:before, .projet-two:hover:before, .projet-third:hover:before, .projet-four:hover:before {
     content: "";
     position: absolute;
     left: 0; right: 0;
@@ -580,7 +579,7 @@ h5 {
     justify-content: center;
     align-items: center;
 }
-.projet-one:hover .middle-card {
+.projet-one:hover .middle-card, .projet-two:hover .middle-card, .projet-third:hover .middle-card, .projet-four:hover .middle-card {
     opacity: 1;
 }
   
@@ -601,7 +600,7 @@ h5 {
     justify-content: space-between;
     align-items: center;
 }
-.projet-one:hover .descr {
+.projet-one:hover .descr, .projet-two:hover .descr, .projet-third:hover .descr, .projet-four:hover .descr {
     opacity: 1;
     transform: translateY(0);
 }
@@ -751,20 +750,6 @@ button {
 		width:10%;
 		margin:0 1%;
 	}
-    /*h1 {
-        font-size: 11.7vmin;
-        line-height: 11.5vmin;
-        transform: translateY(-22px);
-    }
-    h1 span {
-        font-size: 14vmin;
-    }
-    .baseline {
-        font-size: 3.3vmin;
-    }
-    .pluriel-bg {
-        font-size: 37vmin;
-    }*/
     .hero-menu {
         display: flex;
     }
@@ -780,9 +765,6 @@ button {
     }
     .video-photo>div:first-child {
         display: block;
-    }
-    .web-graph {
-        margin-left: 11vw;
     }
     .web-graph>div:last-child {
         display: flex;
