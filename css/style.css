@@ -35,6 +35,14 @@
     font-family: avenir-m;
     src: url(../font/avenir/Avenir-Medium.ttf);
 }
+/* surcharge de font awesome */
+.fa {
+    transition: 0.3s ease-in-out;
+    color:var(--grey-sp);
+}
+.fa:hover {
+    scale: 1.5;
+}
 /* style paragraphe texte */
 html {
     color: var(--black-sp);
@@ -156,9 +164,6 @@ li a {
 	justify-content:space-around;
 	align-items:center;
 }
-.fa {
-	color:var(--grey-sp);
-}
 
 /* mise en page du hero */
 /*----------------------*/
@@ -197,7 +202,7 @@ li a {
     /*max-width: 545px;
     max-height: 382px;
     height: 382px;*/
-    height: 100%;
+    height: 68%;
     display: flex;
     align-items: center;
     background: no-repeat center/38vw url(../img/Logo-SP-bulle-BG.png);
@@ -271,13 +276,12 @@ h1>span.bg-font {
     display: none;
     justify-content: space-around;
     background-color: #FFF;
-    z-index: 2;
     position: relative;
-    padding-top: 24px;
+    padding-top: 48px;
 }
 .hero-menu .bg {
     display: flex;
-    width: 76vw;
+    width: 80.1vw;
     justify-content: space-between;
 }
 .hero-menu a {
@@ -294,9 +298,11 @@ h1>span.bg-font {
 }
 .social-icon-hero {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    width: 174px;
+}
+.line-1, .line-2, .line-3, .line-4, .social-icon-hero {
+    width: 16.2vw;
+    text-align: center;
 }
 .line-1::before {
     content: "";
@@ -406,7 +412,7 @@ h1>span.bg-font {
 .card .num {
     font-family: roca-two-lit;
     font-size: 10vw;
-    line-height: 136px;
+    line-height: 24vw;
 }
 .text {
     display: flex;
@@ -458,11 +464,16 @@ h5 {
 .web-graph {
     display: flex;
     width: 89%;
-    margin-left: 11vw;
     padding-bottom: 45px;
 }
 .video-photo div {
-    width: 50%;
+    width: 80%;
+}
+.video-photo>div:first-child {
+    display: none;
+}
+.video-photo>div:last-child {
+    display: flex;
 }
 .web-graph div {
     width: 100%;
@@ -474,8 +485,10 @@ h5 {
     max-width: 497px;
     margin-top: -100px;
 }
+.web-graph>div:last-child {
+    display: none;
+}
 .video-photo>div:last-child, .web-graph>div:last-child {
-    display: flex;
     justify-content: center;
     flex-direction: column;
 }
@@ -483,11 +496,13 @@ h5 {
     align-items: end;
     width: 62%;
 }
+.video , .photo {
+    padding: 32px 0 0 96px;
+}
 .video , .photo, .web, .graph {
     display: flex;
     align-items: baseline;
     margin: 32px 0 62px 0;
-    padding: 32px 0 0 96px;
     border-top: 1px solid var(--black-sp);
     padding-top: 32px;
 }
@@ -760,8 +775,20 @@ button {
         flex-direction: row;
         height: 211px;
     }
-    .card .num {
-        line-height: 288px;
+    .video-photo div {
+        width: 50%;
+    }
+    .video-photo>div:first-child {
+        display: block;
+    }
+    .web-graph {
+        margin-left: 11vw;
+    }
+    .web-graph>div:last-child {
+        display: flex;
+    }
+    .web, .graph {
+        padding: 32px 0 0 96px;
     }
 }
 
