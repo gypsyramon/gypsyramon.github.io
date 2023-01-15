@@ -1,19 +1,33 @@
+/* @import url(grid.css); */
 /* reset css */
 * {
 	margin: 0;
 	padding: 0;
 }
+html {
+    background-color: var(--yellow-sp);
+}
+
 /* variable css */
 :root {
     --black-sp : #100c08;
     --grey-sp : #272726;
     --yellow-sp : #fff155;
 }
+.w-80 {
+    width: 80vw;
+    margin: 0 auto;
+}
+
 /* import font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 @font-face {
     font-family: roca-two;
     src: url(../font/roca-two/roca-two.ttf);
+}
+@font-face {
+    font-family: roca-two-l;
+    src: url(../font/roca-two/roca-two-light.ttf);
 }
 @font-face {
     font-family: roca-two-lit;
@@ -46,7 +60,6 @@
 /* style paragraphe texte */
 html {
     color: var(--black-sp);
-    background: var(--yellow-sp);
 }
 body {
     overflow-x: hidden;
@@ -60,21 +73,21 @@ nav {
 	margin:5px;
 }
 .container {
-  width:45px;
-  height:45px;
-  padding: 10px;
-  overflow: hidden;
-  background-color: #FFF;
-  border: 1px solid var(--black-sp);
-  border-radius:45px;
-  box-shadow: -3px 3px;
-  transition: 0.4s ease-in-out;
-  position: fixed;
-  z-index: 999;
+    width:45px;
+    height:45px;
+    padding: 10px;
+    overflow: hidden;
+    background-color: #FFF;
+    border: 1px solid var(--black-sp);
+    border-radius:45px;
+    box-shadow: -3px 3px;
+    transition: 0.4s ease-in-out;
+    position: fixed;
+    z-index: 999;
 }
 .change .container {
-  width:350px;
-  height:270px;
+    width:350px;
+    height:270px;
 	border-radius:35px;
 }
 .cross {
@@ -83,20 +96,20 @@ nav {
 	left:4px;
 }
 ul {
-  list-style-type: none;
-  display:none;
+    list-style-type: none;
+    display:none;
 }
 .change ul {
-  display:block;
+    display:block;
 	margin:16px;
 }
 li a {
-  display: block;
+    display: block;
 	position:relative;
-  color: var(--black-sp);
-  text-decoration: none;
-  text-transform:uppercase;
-  font-family: 'Montserrat', sans-serif;
+    color: var(--black-sp);
+    text-decoration: none;
+    text-transform:uppercase;
+    font-family: 'Montserrat', sans-serif;
 	transition: 2s ease-out;
 	opacity:0;
 }
@@ -105,56 +118,56 @@ li a {
 	opacity:1;
 }
 .slide-line::before {
-  content: "";
-  position: absolute;
-  background: var(--grey-sp);
-  width: 50%;
-  height: 2px;
-  bottom: -2px;
-  transform-origin: 100% 0;
-  transform: scaleX(0);
-  transition: transform 0.4s;
+    content: "";
+    position: absolute;
+    background: var(--grey-sp);
+    width: 50%;
+    height: 2px;
+    bottom: -2px;
+    transform-origin: 100% 0;
+    transform: scaleX(0);
+    transition: transform 0.4s;
 }
 .slide-line:hover::before {
-  transform-origin: 0 0;
-  transform: scaleX(1);
+    transform-origin: 0 0;
+    transform: scaleX(1);
 }
 .cross {
-  display: inline-block;
-  cursor: pointer;
+    display: inline-block;
+    cursor: pointer;
 }
 .bar1, .bar2, .bar3 {
-  background-color: var(--grey-sp);
-  margin: 6px 0;
-  border-radius:5px;
-  transition: 0.4s ease-out;
+    background-color: var(--grey-sp);
+    margin: 6px 0;
+    border-radius:5px;
+    transition: 0.4s ease-out;
 }
 .bar1 {
-  width: 15px;
-  height: 5px;
+    width: 15px;
+    height: 5px;
 }
 .bar2 {
-  width: 35px;
-  height: 5px;
+    width: 35px;
+    height: 5px;
 }
 .bar3 {
-  width: 25px;
-  height: 5px;
+    width: 25px;
+    height: 5px;
 }
 .change .bar1 {
-  transform: translate(0, 11px) rotate(45deg);
-  width: 35px;
-  height: 5px;
+    transform: translate(0, 11px) rotate(45deg);
+    width: 35px;
+    height: 5px;
 }
 .change .bar2 {
-  transform: translate(14px, 0);
-  width: 5px;
-  height: 5px;
+    transform: translate(14px, 0);
+    width: 5px;
+    height: 5px;
 }
 .change .bar3 {
-  transform: translate(0, -11px) rotate(-45deg);
-  width: 35px;
-  height: 5px;
+    transform: translate(0, -11px) rotate(-45deg);
+    width: 35px;
+    height: 5px;
 }
 .social-icon {
 	display:none;
@@ -344,23 +357,28 @@ h1>span.bg-font {
 /*-----------------------------*/
 /*-----------------------------*/
 
-.agence, .portfolio {
+.agence {
     padding-top: 70px;
     background-color: #FFF;
+}
+.portfolio {
+    background-color: var(--black-sp);
+}
+.portfolio h2 {
+    color: #fff;
 }
 .agence h2, .portfolio h2 {
     font-family: avenir-m;
     font-size: max(32px,4.5vw);
-    line-height: max(32px,5vw);
-    padding: 0 9vw;
+    line-height: max(32px,4.1vw);
 }
 .agence h2 span {
     font-family: roca-two-it;
 }
 .card {
-    width: 70vw;
+    width: 56vw;
     max-width: 1301px;
-    margin: 8.5vw 0 0 9vw;
+    margin: 6.1vw 0 0 6.9vw;
     padding: 42px 24px;
     border: 3px solid var(--black-sp);
     border-radius: 50px;
@@ -373,7 +391,7 @@ h1>span.bg-font {
     max-width: 650px;
 }
 .card.small.third {
-    margin: 8.5vw auto 0;
+    /* margin: 8.5vw auto 0; */
 }
 .card>div {
     display: flex;
@@ -382,13 +400,13 @@ h1>span.bg-font {
 }
 .card p {
     font-family: avenir-m;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 20px;
 }
 .card .num {
     font-family: roca-two-lit;
     font-size: 10vw;
-    line-height: 24vw;
+    line-height: 15vw;
 }
 .text {
     display: flex;
@@ -398,15 +416,16 @@ h1>span.bg-font {
 }
 .card .text p:first-child>span {
     font-family: roca-two-it;
-    font-size: 24px;
-    line-height: 21px;
+    font-size: 16px;
+    line-height: 20px;
 }
 .quote{
     width: 64vw;
     font-family: avenir-m;
     font-size: max(24px,2.4vw);
-    margin-left: 16vw;
-    margin-top: 61px;
+    line-height: max(31px,3.4vw);
+    margin-top: max(64px,4.1vw);
+    margin-left: 6.5vw;
 }
 .quote h3 span {
     font-family: roca-two-lit;
@@ -415,16 +434,20 @@ h1>span.bg-font {
 h4 {
     font-family: avenir-m;
     font-size: max(24px,4vw);
-    margin-top: 34px;
-    padding: 0 9vw;
+    margin-top: 47px;
+    margin-left: 6.4vw;
 }
 h4+p {
-    max-width: 277px;
+    width: 57vw;
+    max-width: 403px;
     margin-top: 1em;
-    padding-left: 17vw;
+    margin-left: 13.4vw;
     font-family: avenir-m;
+    font-size: 14px;
 }
-
+main>section:nth-child(3) {
+    padding-bottom: 96px;
+}
 /* mise en page de nos métiers */
 /*-----------------------------*/
 /*-----------------------------*/
@@ -513,6 +536,35 @@ h5 {
 }
 .media>div:last-child, .strat>div:last-child {
     margin: 24px 0 24px 24px;
+}
+
+/* test idée design métiers */
+/*----------------------------*/
+/*----------------------------*/
+
+
+.card-cpt {
+    width: 92vw;
+    display: grid;
+    grid-gap: 0.5em;
+    grid-template-columns: repeat(auto-fill,minmax(20rem, 1fr));
+    margin: 10vw auto;
+}
+.card-video, .card-photo, .card-web, .card-graph, .card-press, .card-start {
+    padding: 1.2em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+}
+.card-cpt h5 {
+    font-size: max(24px,1.5vw);
+    line-height: 1.1em;
+}
+.card-cpt h6 {
+    font-family: avenir-l;
+    font-size: max(1em,1vw);
 }
 
 /* test idée design portfolio */
@@ -723,23 +775,26 @@ button {
 /*-------------------------*/
 
 @media screen and (min-width:847px){
-	nav {
-		margin:5px 24px 5px 5px;
+    .flex {
+        display: flex;
+    }
+    nav {
+	    margin:5px 24px 5px 5px;
 	} 
- .change .container {
-	  width:96.8%;
-	  height:45px;
-    display:flex;
-    border-radius:50px;
-  }
-  .change ul {
-    list-style-type: none;
-    display:flex;
-    justify-content:space-between;
-		align-items:center;
-		margin:0 5%;
-		width:90%;
-  }
+    .change .container {
+	    width:96.8%;
+	    height:45px;
+        display:flex;
+        border-radius:50px;
+    }
+    .change ul {
+        list-style-type: none;
+        display:flex;
+        justify-content:space-between;
+	    align-items:center;
+	    margin:0 5%;
+	    width:90%;
+    }
 	.slide-line::before {
 		width:100%;
 	}
@@ -758,7 +813,7 @@ button {
     }
     .card>div {
         flex-direction: row;
-        height: 211px;
+        height: 147px;
     }
     .video-photo div {
         width: 50%;
@@ -772,5 +827,10 @@ button {
     .web, .graph {
         padding: 32px 0 0 96px;
     }
+    /*test idée design métiers*/
 }
-
+@media screen and (min-width:1318px) {
+    .card-cpt {
+        grid-template-columns: repeat(auto-fill,minmax(12rem, 1fr));
+    }
+}
