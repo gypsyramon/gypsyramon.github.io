@@ -390,9 +390,9 @@ h1>span.bg-font {
 .card.small {
     max-width: 650px;
 }
-.card.small.third {
-    /* margin: 8.5vw auto 0; */
-}
+/* .card.small.third {
+    margin: 8.5vw auto 0;
+} */
 .card>div {
     display: flex;
     flex-direction: column;
@@ -548,7 +548,7 @@ h5 {
     display: grid;
     grid-gap: 0.5em;
     grid-template-columns: repeat(auto-fill,minmax(20rem, 1fr));
-    margin: 10vw auto;
+    margin: 10vw auto 5vw;
 }
 .card-video, .card-photo, .card-web, .card-graph, .card-press, .card-start {
     padding: 1.2em;
@@ -559,12 +559,12 @@ h5 {
     gap: 1em;
 }
 .card-cpt h5 {
-    font-size: max(24px,1.5vw);
+    font-size: max(20px,1.5vw);
     line-height: 1.1em;
 }
 .card-cpt h6 {
     font-family: avenir-l;
-    font-size: max(1em,1vw);
+    font-size: max(0.8em,1vw);
 }
 
 /* test idée design portfolio */
