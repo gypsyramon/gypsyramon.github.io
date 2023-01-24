@@ -357,15 +357,9 @@ h1>span.bg-font {
 /*-----------------------------*/
 /*-----------------------------*/
 
-.agence {
+.agence, .portfolio{
     padding-top: 70px;
     background-color: #FFF;
-}
-.portfolio {
-    background-color: var(--black-sp);
-}
-.portfolio h2 {
-    color: #fff;
 }
 .agence h2, .portfolio h2 {
     font-family: avenir-m;
@@ -552,7 +546,9 @@ h5 {
 }
 .card-video, .card-photo, .card-web, .card-graph, .card-press, .card-start {
     padding: 1.2em;
-    border-radius: 1em;
+    border: 3px solid var(--black-sp);
+    border-radius: 2.1em;
+    box-shadow: -3px 3px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -669,6 +665,13 @@ h5 {
     font-family: roca-two;
     font-size: 48px;
     line-height: 54px;
+    background-color: var(--yellow-sp);
+    color: var(--black-sp);
+    padding: 8px 16px;
+    border: 2px solid var(--black-sp);
+    box-shadow: -3px 3px;
+    border-radius: 50px;
+    margin-bottom: 0.2em;
 }
 .descr-client {
     line-height: 19px;
@@ -702,7 +705,8 @@ button {
     top: 0;
     height: 100%;
     width: 55%;
-    background: #202020;
+    background: var(--grey-sp);
+    border-radius: 50px;
     z-index: -1;
     transition: 0.3s ease-in all;
   }
@@ -713,7 +717,8 @@ button {
     top: 5%;
     height: 90%;
     width: 5%;
-    background: white;
+    border-radius: 50px;
+    background: var(--yellow-sp);
     z-index: -1;
     transition: 0.4s 0.02s ease-in all;
   }
@@ -731,7 +736,7 @@ button {
   }
   button:hover .icon-right.after:after {
     left: -80px;
-    color: white;
+    color: var(--yellow-sp);
     transition: 0.2s 0.2s ease all;
   }
   button:hover .icon-right.after:before {
@@ -757,7 +762,7 @@ button {
   }
   .icon-right.after:after {
     left: -250px;
-    color: black;
+    color: var(--yellow-sp);
     transition: 0.15s 0.25s ease left, 0.5s 0.05s ease color;
   }
   .icon-right.after:before {
