@@ -378,7 +378,7 @@ h1>span.bg-font {
 }
 .agence h2, .portfolio h2 {
     font-family: avenir-m;
-    font-size: clamp(32px,4,5vw,95px);
+    font-size: clamp(32px,4.5vw,95px);
     line-height: clamp(32px,4.1vw,95px);
 }
 .agence h2 span {
@@ -442,7 +442,7 @@ h1>span.bg-font {
 }
 h4 {
     font-family: avenir-m;
-    font-size: max(24px,4vw);
+    font-size: clamp(24px,2vw,48px);
     margin-top: 47px;
     margin-left: 6.4vw;
 }
@@ -851,7 +851,7 @@ button {
 }
 @media screen and (min-width:1318px) {
     .card-cpt {
-        grid-template-columns: repeat(auto-fill,minmax(12rem, 1fr));
+        grid-template-columns: repeat(auto-fill,minmax(13vw, 1fr));
     }
 }
 
