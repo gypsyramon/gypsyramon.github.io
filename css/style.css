@@ -304,6 +304,9 @@ h1>span.bg-font {
     display: flex;
     align-items: center;
 }
+.social-icon .fa, .social-icon-hero .fa{
+    font-size: clamp(16px,1vw,24px);
+}
 .line-1, .line-2, .line-3, .line-4, .social-icon-hero {
     width: 16.2vw;
     text-align: center;
@@ -314,7 +317,7 @@ h1>span.bg-font {
     background-color: black;
     width: 1px;
     display: inline-block;
-    height: 550px;
+    height: 38vw;
     bottom: 16px;
     left: 10%;
 }
@@ -324,7 +327,7 @@ h1>span.bg-font {
     background-color: black;
     width: 1px;
     display: inline-block;
-    height: 550px;
+    height: 38vw;
     bottom: 16px;
     left: 26%;
 }
@@ -334,7 +337,7 @@ h1>span.bg-font {
     background-color: black;
     width: 1px;
     display: inline-block;
-    height: 550px;
+    height: 38vw;
     bottom: 16px;
     left: 42%;
 }
@@ -344,7 +347,7 @@ h1>span.bg-font {
     background-color: black;
     width: 1px;
     display: inline-block;
-    height: 550px;
+    height: 38vw;
     bottom: 16px;
     left: 58%;
 }
@@ -354,7 +357,7 @@ h1>span.bg-font {
     background-color: black;
     width: 1px;
     display: inline-block;
-    height: 550px;
+    height: 38vw;
     bottom: 16px;
     left: 74%;
 }
@@ -364,7 +367,7 @@ h1>span.bg-font {
     background-color: black;
     width: 1px;
     display: inline-block;
-    height: 550px;
+    height: 38vw;
     bottom: 16px;
     left: 90%;
 }
