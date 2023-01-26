@@ -378,8 +378,8 @@ h1>span.bg-font {
 }
 .agence h2, .portfolio h2 {
     font-family: avenir-m;
-    font-size: max(32px,4.5vw);
-    line-height: max(32px,4.1vw);
+    font-size: clamp(32px,4,5vw,95px);
+    line-height: clamp(32px,4.1vw,95px);
 }
 .agence h2 span {
     font-family: roca-two-it;
@@ -414,8 +414,8 @@ h1>span.bg-font {
 }
 .card .num {
     font-family: roca-two-lit;
-    font-size: 10vw;
-    line-height: 15vw;
+    font-size: clamp(32px,8vw,147px);
+    line-height: revert;
 }
 .text {
     display: flex;
@@ -431,14 +431,14 @@ h1>span.bg-font {
 .quote{
     width: 64vw;
     font-family: avenir-m;
-    font-size: max(24px,2.4vw);
-    line-height: max(31px,3.4vw);
+    font-size: clamp(24px,1.4vw,64px);
+    line-height: clamp(31px,1.9vw,64px);
     margin-top: max(64px,4.1vw);
     margin-left: 6.5vw;
 }
 .quote h3 span {
     font-family: roca-two-lit;
-    font-size: max(24px,2.4vw);
+    font-size: clamp(28px,1.6vw,64px);
 }
 h4 {
     font-family: avenir-m;
